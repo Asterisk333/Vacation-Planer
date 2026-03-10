@@ -98,5 +98,5 @@ app.get('/aggregate/:year', (req, res) => {
     res.json({ year, users, total, perDay, status });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log("Server laeuft auf", PORT));

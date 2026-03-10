@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ferienplaner 2027 – Eingabe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Ferienplanung 2027</h2>
+
+  <div id="name-step" class="controls">
+    <label>Name: </label>
+    <input id="username" type="text" placeholder="Name eingeben" />
+    <button onclick="start()">Weiter</button>
+  </div>
+
+  <div id="calendar-step" style="display:none;">
+    <h3 id="hello"></h3>
+    <div id="calendar"></div>
+    <div class="controls">
+      <button onclick="save()">Speichern</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

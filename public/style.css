@@ -1,0 +1,47 @@
+body { font-family: system-ui, sans-serif; margin: 28px; }
+h2, h3, h4 { margin: 6px 0 10px; }
+.controls { margin-bottom: 12px; }
+
+#calendar { display: flex; flex-wrap: wrap; gap: 18px; }
+.month { border: 1px solid #d0d0d0; padding: 10px; border-radius: 8px; min-width: 230px; }
+.month h4 { margin: 4px 0 8px; font-size: 14px; font-weight: 600; }
+
+.grid { display: flex; flex-wrap: wrap; width: 224px; }
+.day {
+  width: 28px; height: 28px; margin: 2px;
+  display: inline-flex; justify-content: center; align-items: center;
+  border: 1px solid #bdbdbd; border-radius: 4px; font-size: 12px; cursor: pointer;
+  user-select: none;
+}
+.day.maybe { background: #ffe58a; border-color: #d9c26b; }
+.day.no    { background: #ff6b6b; color: #fff; border-color: #e05656; }
+.day.yes   { background: #51cf66; color: #fff; border-color: #3cae4f; }
+
+/* Group legend + chips */
+.legend { display:flex; gap:10px; align-items:center; margin-bottom:10px; flex-wrap:wrap; }
+.legend .chip { display:inline-flex; align-items:center; gap:6px; padding:4px 8px; border:1px solid #ddd; border-radius:14px; font-size:12px; }
+.legend .swatch { width:14px; height:14px; border:1px solid #aaa; border-radius:3px; }
+
+.count {
+  position: relative;
+}
+.count::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  background: rgba(0,0,0,0.78);
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity .12s ease, transform .12s ease;
+}
+.count:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}

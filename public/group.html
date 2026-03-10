@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ansicht – Gruppe & Schnittmenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Jahresansicht – Gruppe</h2>
+
+  <div class="legend">
+    <div class="chip"><span class="swatch" style="background:#ff6b6b"></span> Mind. 1x Nein</div>
+    <div class="chip"><span class="swatch" style="background:#51cf66"></span> Alle Ja</div>
+    <div class="chip"><span class="swatch" style="background:#ffe58a"></span> Nur Vielleicht (0% Ja)</div>
+    <div class="chip">Gelb→Gruen: Anteil Ja ohne Neins</div>
+  </div>
+
+  <div class="controls">
+    <label>Jahr:</label>
+    <input id="year" type="number" value="2027" style="width:80px" />
+    <button onclick="loadUsers()">User laden</button>
+  </div>
+
+  <div id="users" class="controls"></div>
+
+  <div class="controls">
+    <button onclick="loadAggregate()">Schnittmenge anzeigen</button>
+  </div>
+
+  <div id="calendar"></div>
+
+  <script src="group.js"></script>
+</body>
+</html>

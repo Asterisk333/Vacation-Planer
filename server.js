@@ -98,5 +98,28 @@ app.get('/aggregate/:year', (req, res) => {
     res.json({ year, users, total, perDay, status });
 });
 
+app.delete('/delete/:user/:year', (req, res) => {
+    const user = sanitize(req.params.user);
+    const year = sanitize(req.params.year);
+
+    if (!user || !year) {
+        return res.status(400).json({ error: "User oder Year fehlt" });
+    }
+
+    const filePath = path.join(dataDir, `${user}_${year}.json`);
+
+    if (!fs.existsSync(filePath)) {
+        return res.status(404).json({ error: "Datensatz nicht gefunden" });
+    }
+
+    // Datei entfernen
+    try {
+        fs.unlinkSync(filePath);
+        return res.json({ ok: true, message: `Datensatz fuer ${user} wurde geloescht.` });
+    } catch (err) {
+        return res.status(500).json({ error: "Konnte Datei nicht loeschen." });
+    }
+});
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log("Server laeuft auf", PORT));

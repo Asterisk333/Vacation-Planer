@@ -40,6 +40,27 @@ function el(tag, attrs = {}, ...children) {
     const data = await res.json();
     renderGroupCalendar(data);
   }
+
+async function deleteUser() {
+  const user = document.getElementById("delUser").value.trim();
+  const year = document.getElementById("delYear").value.trim();
+
+  if (!user) return alert("Name fehlt.");
+
+  const res = await fetch(`/delete/${user}/${year}`, {
+      method: "DELETE"
+  });
+
+  const json = await res.json();
+
+  if (!res.ok) {
+      alert(json.error || "Fehler");
+      return;
+  }
+
+  alert(json.message || "Datensatz geloescht");
+}
+
   
   function colorForCounts(c, total) {
     // Rot wenn es mind. ein Nein gibt

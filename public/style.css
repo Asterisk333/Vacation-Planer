@@ -1,6 +1,10 @@
-body { font-family: system-ui, sans-serif; margin: 28px; }
+body { font-family: system-ui, sans-serif; margin: 28px; margin-top: 0; }
 h2, h3, h4 { margin: 6px 0 10px; }
 .controls { margin-bottom: 12px; }
+a {margin:0 10px; color:#4a90e2; text-decoration:none;}
+header {padding:20px 0; text-align:center; font-size:14px; color:#666;}
+
+header > div {margin-bottom:8px;}
 
 #calendar { display: flex; flex-wrap: wrap; gap: 18px; }
 .month { border: 1px solid #d0d0d0; padding: 10px; border-radius: 8px; min-width: 230px; }

@@ -1,9 +1,10 @@
 let selections = {};
 let username = "";
-const year = 2027;
+let year = 2026;
 
 function start() {
   username = document.getElementById("username").value.trim();
+  year = document.getElementById("year").value.trim();
   if (!username) return alert("Bitte Name eingeben.");
 
   document.getElementById("name-step").style.display = "none";

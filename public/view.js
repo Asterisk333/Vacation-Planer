@@ -1,7 +1,8 @@
 async function loadData() {
     const user = document.getElementById("user").value.trim();
+    const year = document.getElementById("year").value.trim();
     if (!user) return alert("User eingeben.");
-    const res = await fetch(`/load/${user}/2027`);
+    const res = await fetch(`/load/${user}/${year}`);
     if (!res.ok) return alert("Keine Daten gefunden.");
     const data = await res.json();
     renderCalendar(data);

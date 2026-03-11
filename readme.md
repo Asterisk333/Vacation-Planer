@@ -17,7 +17,6 @@ A group view shows color‑coded overlaps for all selected users.
 ## Project Structure
 ```
 
-app/
 public/        # Frontend files (HTML, JS, CSS)
 data/          # User JSON files (auto‑generated)
 server.js      # API and calendar aggregation

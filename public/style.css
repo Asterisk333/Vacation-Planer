@@ -17,7 +17,7 @@ header > div {margin-bottom:8px;}
   border: 1px solid #bdbdbd; border-radius: 4px; font-size: 12px; cursor: pointer;
   user-select: none;
 }
-.day.maybe { background: #ffe58a; border-color: #d9c26b; }
+.day.maybe { background: #ebebeb; border-color: #bdbdbd; }
 .day.no    { background: #ff6b6b; color: #fff; border-color: #e05656; }
 .day.yes   { background: #51cf66; color: #fff; border-color: #3cae4f; }
 

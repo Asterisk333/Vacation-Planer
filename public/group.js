@@ -70,6 +70,9 @@ async function deleteUser() {
     // Keine Neins: Gelb→Gruen je nach Anteil Ja
     const ratio = total ? (c.yes / total) : 0;
     const hue = 50 + Math.round(70 * ratio); // 50 (gelb) bis 120 (gruen)
+    if (hue === 50){
+      return "#ebebeb"
+    }
     return `hsl(${hue},70%,60%)`;
   }
   

@@ -80,7 +80,7 @@ app.get('/aggregate/:year', (req, res) => {
             const v = (dset.choices && dset.choices[date]) || 'maybe';
             if (v === 'yes') perDay[date].yes++;
             else if (v === 'no') perDay[date].no++;
-            else perDay[date].maybe++;
+            //else perDay[date].maybe++;
         }
     }
 

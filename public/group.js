@@ -107,8 +107,7 @@ async function deleteUser() {
         dayDiv.style.borderColor = "#bdbdbd";
         dayDiv.innerText = d;
   
-        dayDiv.setAttribute("data-tip", `${dateStr}
-  Ja: ${c.yes}  Nein: ${c.no}  Vielleicht: ${c.maybe}`);
+        dayDiv.setAttribute("data-tip", `${dateStr} Ja: ${c.yes}  Nein: ${c.no}`); //  Vielleicht: ${c.maybe}`);
   
         grid.appendChild(dayDiv);
       }
